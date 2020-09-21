@@ -1,7 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+  --bg-blend: #c5e6a6;
+  --main-bg-color: #b9bea5;
+  --input-bg-color: #bddea6;
+  --accent-color: #c5e6a6;
+  --font-color: #9899a6;
+  --wildcard-color: #a7aaa4;
+  --button-color: #9def50;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 
 * {
   box-sizing: border-box;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 body {
@@ -9,15 +29,31 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-  color: ;
-  background: ;
+  font-family: 'Roboto', sans-serif;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg);
+  background-size: cover;
+  background-color: var(--bg-blend);
+  background-blend-mode: multiply;
+  color: #fff;
+}
+
+#shadow-layer {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, black, transparent, black);
 }
 
 .container {
   width: 600px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 #title,
@@ -34,22 +70,51 @@ body {
 }
 
 form {
-  padding: 1em 2em;
-  background: rgba(0, 0, 241, 0.1);
+  font-weight: bold;
+  color: #333;
+  padding: 1.5em 2em;
+  background: var(--main-bg-color);
+  opacity: 0.9;
+  border-radius: 5px;
 }
 
-.block-element {
+form,
+#submit,
+textarea {
+  border-radius: 5px;
+}
+
+.input-element {
   display: block;
   width: 100%;
   padding: 0.7em;
+  border: none;
+  border-bottom: 3px solid var(--accent-color);
+  background: transparent;
 }
 
+#stay,
+#pet-info1,
+#pet-info2,
+#services,
+#user-comment {
+  margin-bottom: 1em;
+}
+
+#stay p {
+  margin-bottom: 0.5em;
+}
 .stay-duration {
   display: flex;
   justify-content: space-around;
-  /* grid-template-columns: repeat(2, 1fr); */
 }
-#services > .form-control {
+
+#services > .form-control label {
+  font-weight: normal;
+}
+
+#services > .form-control label:after {
+  content: ' - ';
 }
 
 #services small {
@@ -60,10 +125,15 @@ textarea {
 }
 #submit {
   display: block;
+  font-weight: bold;
   width: 100%;
   padding: 1em;
   border: none;
-  background: green;
+  background: var(--button-color);
+  color: #333;
 }
 
-/* image https://unsplash.com/photos/q9nZUFC1nTw */
+#submit:hover {
+  background: green;
+  color: #fff;
+}

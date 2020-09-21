@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+    <div id="shadow-layer"></div>
     <div class="container">
       <h1 id="title"><i class="fas fa-paw"></i> Pet Care Reservation</h1>
       <p id="description">
@@ -20,40 +21,42 @@
         resort.
       </p>
       <form action="submit" id="survey-form">
-        <div class="form-control">
-          <label for="name" id="name-label">Name</label>
-          <input
-            type="text"
-            id="name"
-            class="block-element"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        <div class="form-control">
-          <label for="email" id="email-label">Email</label>
-          <input
-            type="email"
-            id="email"
-            class="block-element"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div class="form-control">
-          <label id="number-label">Number of pets</label>
-          <input
-            type="number"
-            id="number"
-            class="block-element"
-            min="1"
-            max="10"
-            placeholder="1"
-          />
+        <div id="user-info">
+          <div class="form-control">
+            <label for="name" id="name-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="input-element"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="email" id="email-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="input-element"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label id="number-label">Number of pets</label>
+            <input
+              type="number"
+              id="number"
+              class="input-element"
+              min="1"
+              max="10"
+              placeholder="1"
+            />
+          </div>
         </div>
 
-        <div class="stay">
-          <p>Duration of the stay</p>
+        <div id="stay">
+          <p>Duration of stay</p>
           <div class="stay-duration">
             <div class="form-control">
               <label for="start">Start Date:</label>
@@ -61,7 +64,7 @@
                 type="date"
                 id="start"
                 name="stay-start"
-                class="block-element"
+                class="input-element btn"
               />
             </div>
             <div class="form-control">
@@ -70,29 +73,43 @@
                 type="date"
                 id="end"
                 name="stay-start"
-                class="block-element"
+                class="input-element btn"
               />
             </div>
           </div>
         </div>
 
-        <label for="dropdown">What kind of pets will we take care of?</label>
-        <select name="dropdown" id="dropdown" class="block-element">
-          <option value="placeholder">Dog(s)</option>
-          <option value="placeholder">Cat(s)</option>
-          <option value="placeholder">Caged Animal(s)</option>
-          <option value="placeholder">Mixed</option>
-        </select>
-
-        <div class="form-control">
-          <label for="size">Are your pets sociable?</label>
+        <div id="pet-info1">
+          <label for="dropdown">What kind of pets will we take care of?</label>
+          <select name="dropdown" id="dropdown" class="input-element btn">
+            <option value="placeholder">Dog(s)</option>
+            <option value="placeholder">Cat(s)</option>
+            <option value="placeholder">Caged Animal(s)</option>
+            <option value="placeholder">Mixed</option>
+          </select>
+        </div>
+        <div id="pet-info2">
           <div class="form-control">
-            <input type="radio" name="radio1" value="placeholder" checked />
-            <label for="radio1">Yes</label>
-          </div>
-          <div class="form-control">
-            <input type="radio" name="radio1" value="placeholder" />
-            <label for="radio1">No</label>
+            <label for="size">Are your pets sociable?</label>
+            <div class="form-control">
+              <input
+                type="radio"
+                name="radio1"
+                value="placeholder"
+                class="btn"
+                checked
+              />
+              <label for="radio1">Yes</label>
+            </div>
+            <div class="form-control">
+              <input
+                type="radio"
+                name="radio1"
+                value="placeholder"
+                class="btn"
+              />
+              <label for="radio1">No</label>
+            </div>
           </div>
         </div>
         <div id="services">
@@ -101,63 +118,87 @@
             <small>(extra fees apply)</small></label
           >
           <div class="form-control">
-            <input type="checkbox" name="service" value="daily-grooming" />
+            <input
+              type="checkbox"
+              name="service"
+              value="daily-grooming"
+              class="btn"
+            />
             <label for="value">Daily grooming</label>
-            <br />
             <small class="service-description">
               Brushing, nail clipping, perfuming etc...
             </small>
           </div>
           <div class="form-control">
-            <input type="checkbox" name="service" value="premiun-foods" />
+            <input
+              type="checkbox"
+              name="service"
+              value="premiun-foods"
+              class="btn"
+            />
             <label for="value">Premium foods</label>
-            <br />
             <small class="service-description">
               Only the best premium gourmet foods.
             </small>
           </div>
           <div class="form-control">
-            <input type="checkbox" name="service" value="supplements" />
+            <input
+              type="checkbox"
+              name="service"
+              value="supplements"
+              class="btn"
+            />
             <label for="value">Supplements</label>
-            <br />
             <small class="service-description">
-              Vitamines and energy supplements
+              Vitamines and energy supplements.
             </small>
           </div>
           <div class="form-control">
-            <input type="checkbox" name="service" value="extended-walks" />
+            <input
+              type="checkbox"
+              name="service"
+              value="extended-walks"
+              class="btn"
+            />
             <label for="value">Extended walks</label>
-            <br />
             <small class="service-description">
               The best option if your pet loves long walks.
             </small>
           </div>
           <div class="form-control">
-            <input type="checkbox" name="service" value="power-walks" />
+            <input
+              type="checkbox"
+              name="service"
+              value="power-walks"
+              class="btn"
+            />
             <label for="value">Power walks</label>
-            <br />
             <small class="service-description">
               For pets who need to burn off extra energy.
             </small>
           </div>
           <div class="form-control">
-            <input type="checkbox" name="service" value="pet-taxi" />
+            <input
+              type="checkbox"
+              name="service"
+              value="pet-taxi"
+              class="btn"
+            />
             <label for="value">Pet taxi</label>
-            <br />
             <small class="service-description">
               We will pick up your pets at your front door and bring them back
-              upon your return
+              upon your return.
             </small>
           </div>
         </div>
-        <div class="user-comment">
+        <div id="user-comment">
           <label for=""
             >Please leave a comment if your pets need any special treatment or
             if you have any question.</label
           >
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
-        <button id="submit">Reserve Now</button>
+        <button id="submit" class="btn">Reserve Now</button>
       </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
