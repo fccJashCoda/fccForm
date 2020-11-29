@@ -14,14 +14,14 @@
   </head>
   <body>
     <div id="shadow-layer"></div>
-    <div class="container">
+    <main class="container">
       <h1 id="title"><i class="fas fa-paw"></i> Pet Care Reservation</h1>
       <p id="description">
         Please fill in this form to reserve your pet's stay at our premium pet
         resort.
       </p>
       <form action="submit" id="survey-form">
-        <div id="user-info">
+        <section id="user-info">
           <div class="form-control">
             <label for="name" id="name-label">Name</label>
             <input
@@ -53,9 +53,9 @@
               placeholder="1"
             />
           </div>
-        </div>
+        </section>
 
-        <div id="stay">
+        <section id="stay">
           <p>Duration of stay</p>
           <div class="stay-duration">
             <div class="form-control">
@@ -77,9 +77,9 @@
               />
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="pet-info1">
+        <section id="pet-info1">
           <label for="dropdown">What kind of pets will we take care of?</label>
           <select name="dropdown" id="dropdown" class="input-element btn">
             <option value="placeholder">Dog(s)</option>
@@ -87,8 +87,8 @@
             <option value="placeholder">Caged Animal(s)</option>
             <option value="placeholder">Mixed</option>
           </select>
-        </div>
-        <div id="pet-info2">
+        </section>
+        <section id="pet-info2">
           <div class="form-control">
             <label for="size">Are your pets sociable?</label>
             <div class="form-control">
@@ -111,8 +111,8 @@
               <label for="radio1">No</label>
             </div>
           </div>
-        </div>
-        <div id="services">
+        </section>
+        <section id="services">
           <label for="services"
             >Extra services to provide to your pets
             <small>(extra fees apply)</small></label
@@ -190,17 +190,17 @@
               upon your return.
             </small>
           </div>
-        </div>
-        <div id="user-comment">
+        </section>
+        <section id="user-comment">
           <label for=""
             >Please leave a comment if your pets need any special treatment or
             if you have any question.</label
           >
           <textarea name="" id="" cols="30" rows="10"></textarea>
-        </div>
+        </section>
         <button id="submit" class="btn">Reserve Now</button>
       </form>
-    </div>
+    </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
