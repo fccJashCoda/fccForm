@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,11 +15,12 @@
   <body>
     <div id="shadow-layer"></div>
     <main class="container">
-      <h1 id="title"><i class="fas fa-paw"></i> Pet Care Reservation</h1>
-      <p id="description">
-        Please fill in this form to reserve your pet's stay at our premium pet
-        resort.
-      </p>
+      <header>
+        <h1 id="title"><i class="fas fa-paw"></i> Pet Care Reservation</h1>
+        <p id="description">
+          Please fill in this form to reserve your pet's stay.
+        </p>
+      </header>
       <form action="submit" id="survey-form">
         <section id="user-info">
           <div class="form-control">
@@ -90,7 +91,9 @@
         </section>
         <section id="pet-info2">
           <div class="form-control">
-            <label for="size">Are your pets sociable?</label>
+            <label for="size"
+              >Are your pets friendly towards other animals?</label
+            >
             <div class="form-control">
               <input
                 type="radio"
@@ -194,7 +197,7 @@
         <section id="user-comment">
           <label for=""
             >Please leave a comment if your pets need any special treatment or
-            if you have any question.</label
+            if you have any questions.</label
           >
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </section>

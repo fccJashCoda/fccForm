@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+  --bg-blend: #c5e6a6;
+  --main-bg-color: #b9bea5;
+  --input-bg-color: #bddea6;
+  --accent-color: #c5e6a6;
+  --font-color: #9899a6;
+  --wildcard-color: #a7aaa4;
+  --button-color: #9def50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg);
+  background-size: cover;
+  background-color: var(--bg-blend);
+  background-blend-mode: multiply;
+  color: #fff;
+}
+
+#shadow-layer {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, black, transparent, black);
+}
+
+main {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0 1em 0;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+
+  & #title {
+    margin: 0.5em 0 0 0;
+  }
+  & #description {
+    margin-top: 0;
+  }
+}
+
+form {
+  font-weight: bold;
+  color: #333;
+  padding: 1.5em 2em;
+  background: var(--main-bg-color);
+  opacity: 0.9;
+  border-radius: 5px;
+
+  .input-element {
+    display: block;
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    border-bottom: 3px solid var(--accent-color);
+    background: transparent;
+    outline: none;
+  }
+
+  .input-element:focus {
+    background: #fff;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  & > * {
+    margin-bottom: 1em;
+  }
+
+  #user-info {
+    & > * {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  #stay {
+    & p {
+      margin-bottom: 0.5em;
+    }
+    .stay-duration {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    & label {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  #pet-info1 {
+  }
+  #pet-info2 {
+  }
+
+  #services {
+    & small {
+      font-size: 0.7em;
+    }
+
+    & .form-control {
+      margin: 0.5em 0;
+    }
+
+    & > .form-control label {
+      font-weight: normal;
+    }
+
+    & > .form-control label:after {
+      content: ' - ';
+    }
+  }
+
+  #user-comment {
+    textarea {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+
+  #submit {
+    display: block;
+    font-weight: bold;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background: var(--button-color);
+    color: #333;
+    border-radius: 5px;
+
+    &:hover {
+      background: green;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    margin: 0;
+  }
+
+  form {
+    #stay {
+      .stay-duration {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+
+    #services {
+      & small {
+        display: block;
+      }
+    }
+
+    #submit {
+      font-size: 1.2em;
+    }
+  }
+}
